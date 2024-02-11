@@ -1,0 +1,146 @@
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 60%;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  html {
+    font-size: 58%;
+  }
+
+  .max-width {
+    padding: 0 2rem;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1;
+  }
+
+  .navbar .navbar__content .navbar__links {
+    display: none;
+  }
+
+  .navbar .navbar__content .mobile__links {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .navbar__content .hamburger {
+    cursor: pointer;
+  }
+
+  .navbar .navbar__content .mobile__links {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 20vh;
+    transition: .1s ease-out;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .navbar .navbar__content.active .mobile__links {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    top: 98%;
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .navbar .navbar__content.active .mobile__links li {
+    margin-right: 0;
+  }
+
+  .navbar .navbar__content.active .mobile__links li a {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+  }
+
+  .mobile__links a {
+    font-size: 15px;
+    opacity: 0;
+  }
+
+  .navbar__content.active .mobile__links a {
+    opacity: 1;
+  }
+
+  .navbar__content.active .hamburger {
+    border-top-color: transparent;
+  }
+
+  .navbar__content.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .navbar__content.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  /*header*/
+
+  header {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  header .header__left p {
+    margin: 2rem auto 4rem;
+  }
+
+  /*about*/
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .about__left {
+    max-width: 66rem;
+    text-align: center;
+  }
+
+  .about .about__right {
+    text-align: center;
+  }
+
+  /*projects*/
+
+  .projects ul li,
+  .projects ul li.projects__reversed-list {
+    flex-direction: column;
+  }
+
+  .projects ul li .projects__info {
+    max-width: 66rem;
+  }
+
+  .projects ul li .image img {
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+}
